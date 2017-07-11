@@ -22,7 +22,7 @@ RUN printf "pass = ${OBS_PASS} \n" >> /root/.oscrc
 
 ## Upload to OpenSuse Build Service
 RUN osc checkout home:alinuxninja:tinc \
-&& cd /root/repo/"home:alinuxninja:tinc"/tinc/ \
+&& cd /root/repo/"home:alinuxninja:tinc"/libvdeplug2/ \
 && rm *Ubuntu_17.04.dsc \
 && mv /root/source/* . \
 && osc addremove \
