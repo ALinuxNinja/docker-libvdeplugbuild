@@ -11,7 +11,7 @@ WORKDIR /root/source
 ADD src/sources.list /etc/apt/sources.list
 ## Install OSC and required packages
 ADD http://download.opensuse.org/repositories/openSUSE:Tools/xUbuntu_17.04/Release.key Release.key
-RUN apt-key add Release.key \
+RUN apt-key add - < Release.key \
 && rm Release.key \
 && echo "deb http://download.opensuse.org/repositories/openSUSE:/Tools/xUbuntu_17.04/ /" >> /etc/apt/sources.list.d/osc.list \
 && apt-get update \
