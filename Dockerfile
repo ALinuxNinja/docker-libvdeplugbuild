@@ -16,6 +16,7 @@ RUN apt-key add - < Release.key \
 && echo "deb http://download.opensuse.org/repositories/openSUSE:/Tools/xUbuntu_17.04/ /" >> /etc/apt/sources.list.d/osc.list \
 && apt-get update \
 && apt-get -y --allow-unauthenticated install osc \
+&& apt-get -y install dpkg-dev \
 && apt-get source vde2 \
 && mv *.dsc $(echo "$(ls *.dsc)" | awk -F".dsc" '{print $1}').${Build}.dsc \
 && rm -r vde2-*
