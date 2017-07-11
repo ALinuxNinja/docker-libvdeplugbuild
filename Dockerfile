@@ -9,8 +9,13 @@ RUN mkdir source repo
 WORKDIR /root/source
 ## Get Sources
 ADD src/sources.list /etc/apt/sources.list
-RUN apt-get update \
-&& apt-get -y install dpkg-dev \
+## Install OSC and required packages
+ADD http://download.opensuse.org/repositories/openSUSE:Tools/xUbuntu_16.04/Release.key Release.key
+RUN apt-key add Release.key \
+&& rm Release.key \
+&& echo "deb http://download.opensuse.org/repositories/openSUSE:/Tools/xUbuntu_16.04/ /" >> /etc/apt/sources.list.d/osc.list \
+&& apt-get update \
+&& apt-get -y install dpkg-dev osc \
 && apt-get source vde2 \
 && mv *.dsc $(echo "$(ls *.dsc)" | awk -F".dsc" '{print $1}').${Build}.dsc \
 && rm -r vde2-*
