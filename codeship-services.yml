@@ -1,5 +1,5 @@
 app:
   build:
-    image: alinuxninja/tinc-builder
+    image: alinuxninja/libvdeplug2-builder
     dockerfile: Dockerfile
     encrypted_args_file: build_args.env.encrypted 

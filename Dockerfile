@@ -3,6 +3,10 @@ FROM ubuntu:17.04
 ## Set ENV
 ENV Build=Ubuntu_17.04
 
+## Encrypted Args
+ARG OBS_USER
+ARG OBS_PASS
+
 ## Create Directories
 RUN mkdir source repo
 
