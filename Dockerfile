@@ -31,6 +31,7 @@ RUN printf "user = ${OBS_USER} \n" >> /root/.oscrc
 RUN printf "pass = ${OBS_PASS} \n" >> /root/.oscrc
 
 ## Upload to OpenSuse Build Service
+WORKDIR /root/repo
 RUN osc checkout home:alinuxninja:tinc \
 && cd /root/repo/"home:alinuxninja:tinc"/libvdeplug2/ \
 && rm *Ubuntu_17.04.dsc \
