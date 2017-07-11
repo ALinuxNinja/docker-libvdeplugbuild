@@ -34,7 +34,7 @@ RUN printf "pass = ${OBS_PASS} \n" >> /root/.oscrc
 WORKDIR /root/repo
 RUN osc checkout home:alinuxninja:tinc \
 && cd /root/repo/"home:alinuxninja:tinc"/libvdeplug2/ \
-&& rm *Ubuntu_17.04.dsc \
+&& rm -f *Ubuntu_17.04.dsc \
 && mv /root/source/* . \
 && osc addremove \
 && osc ci . -m "Automatic Codeship build"
