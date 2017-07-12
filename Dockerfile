@@ -13,6 +13,7 @@ RUN mkdir source repo
 ## Get Sources
 WORKDIR /root/source
 ADD src/sources.list /etc/apt/sources.list
+
 ## Install OSC and required packages
 ADD http://download.opensuse.org/repositories/openSUSE:Tools/xUbuntu_17.04/Release.key Release.key
 RUN apt-key add - < Release.key \
