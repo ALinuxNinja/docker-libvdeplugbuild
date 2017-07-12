@@ -5,6 +5,7 @@ ARG OBS_USER
 ARG OBS_PASS
 
 ## Create Directories
+WORKDIR /root
 RUN mkdir source repo
 
 ## Get Sources
