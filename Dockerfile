@@ -23,7 +23,7 @@ RUN apt-key add - < Release.key \
 && apt-get -y --allow-unauthenticated install osc \
 && apt-get -y install dpkg-dev \
 && apt-get source vde2 \
-&& mv *.dsc $(echo "$(ls *.dsc)" | awk -F"-" '{print $1}')-${Build}.dsc \
+&& mv *.dsc vde2-${Build}.dsc \
 && rm -r vde2-*
 
 ## Copy over files
