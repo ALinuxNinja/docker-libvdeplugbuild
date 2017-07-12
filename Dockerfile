@@ -1,4 +1,4 @@
-FROM debian:9
+FROM debian:9.0
 
 ## Encrypted Args
 ARG OBS_USER
