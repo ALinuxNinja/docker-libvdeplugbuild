@@ -24,7 +24,7 @@ RUN apt-key add - < Release.key \
 && apt-get -y install dpkg-dev \
 && apt-get source vde2 \
 && mv *.dsc vde2-${Build}.dsc \
-&& rm -r vde2-*
+&& find . -d -type d -exec rm -rf '{}' \;
 
 ## Copy over files
 ADD src/oscrc /root/.oscrc
