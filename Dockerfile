@@ -1,7 +1,7 @@
 FROM ubuntu:17.04
 
 ## Set ENV
-ENV Build=Ubuntu_17.04
+ENV Build=xUbuntu_17.04
 
 ## Encrypted Args
 ARG OBS_USER
